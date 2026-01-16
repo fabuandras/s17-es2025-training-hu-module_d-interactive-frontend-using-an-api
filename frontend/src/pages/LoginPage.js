@@ -1,13 +1,13 @@
-import React, { useContext, useState } from "react";
+import { useContext, useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./css/login.css";
 import { AuthContext } from "../contexts/AuthContext";
 
 export default function LoginPage() {
+  const { login, serverError, loading } = useContext(AuthContext);
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
-  const { login, serverError, loading } = useContext(AuthContext);
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -15,40 +15,47 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="login">
-      <h2>Login</h2>
+    <div className="login-page">
+      <div className="login-card">
+        <h1 className="login-title">Login</h1>
 
-      {serverError && <div className="alert-error">{serverError}</div>}
-      {loading && <div className="alert">Betöltés...</div>}
+        {serverError && <p className="error-text">{serverError}</p>}
 
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Email</label>
-          <input
-            type="text"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </div>
+        <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label className="form-label">Email</label>
+            <input
+              className="form-input"
+              type="email"
+              placeholder="Enter your email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </div>
 
-        <div>
-          <label>Password</label>
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </div>
+          <div className="form-group">
+            <label className="form-label">Password</label>
+            <input
+              className="form-input"
+              type="password"
+              placeholder="Enter your password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </div>
 
-        <div>
-          <input type="submit" value="LOGIN" />
-        </div>
+          <button className="login-button" type="submit" disabled={loading}>
+            Login
+          </button>
+        </form>
 
-        <div className="szoveg">
-          Registration is free!{" "}
+        <div className="login-footer">
+          Registration is free! <br />
           <NavLink to="/register">CREATE AN ACCOUNT</NavLink>
         </div>
-      </form>
+      </div>
     </div>
   );
 }

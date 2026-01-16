@@ -1,0 +1,213 @@
+.dash-wrap {
+  min-height: calc(100vh - 90px);
+  display: grid;
+  place-items: center;
+  padding: 26px 12px 40px;
+  background: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.dash-card {
+  width: 920px;
+  max-width: 95vw;
+  border: 2px solid #777;
+  background: #fff;
+  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.08);
+  padding: 22px 22px 18px;
+}
+
+.dash-header h1 {
+  margin: 0 0 8px;
+  font-size: 22px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.dash-sub {
+  margin: 0;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #333;
+}
+
+.dash-sep {
+  border-top: 1px dashed #999;
+  margin: 16px 0;
+}
+
+/* ===== METRICS ===== */
+.dash-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.metric {
+  border: 2px solid #777;
+  padding: 14px 12px;
+  position: relative;
+  text-align: center;
+}
+
+.metric-tag {
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  font-size: 9px;
+  letter-spacing: 1px;
+  background: #fff;
+  padding: 0 6px;
+  color: #777;
+  text-transform: uppercase;
+}
+
+.metric-value {
+  font-size: 26px;
+  font-weight: 800;
+  margin-top: 4px;
+}
+
+.metric-label {
+  margin-top: 10px;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #555;
+}
+
+/* ===== PANELS ===== */
+.dash-charts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 8px;
+}
+
+.panel {
+  border: 2px solid #777;
+}
+
+.panel-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  border-bottom: 1px dashed #999;
+}
+
+.panel-top h3 {
+  margin: 0;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.panel-tag {
+  font-size: 9px;
+  color: #777;
+  letter-spacing: 1px;
+}
+
+.panel-body {
+  padding: 12px;
+  min-height: 220px;
+  position: relative;
+}
+
+/* bal oldali “chart” placeholder */
+.chart-placeholder .fake-grid {
+  width: 100%;
+  height: 190px;
+  border: 1px dashed #bbb;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.06) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* jobb oldali donut placeholder */
+.donut-placeholder {
+  display: grid;
+  place-items: center;
+  gap: 12px;
+}
+
+.donut {
+  width: 140px;
+  height: 140px;
+  border: 16px solid #bbb;
+  border-top-color: #333;
+  border-right-color: #333;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.legend {
+  display: flex;
+  gap: 18px;
+  font-size: 10px;
+  color: #444;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: #333;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot.light {
+  background: #bbb;
+}
+
+/* ===== ACTIONS ===== */
+.dash-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.action-btn {
+  border: 2px solid #777;
+  text-align: center;
+  padding: 12px 10px;
+  text-decoration: none;
+  color: #222;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.action-btn:hover {
+  background: #f2f2f2;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .dash-card {
+    width: 520px;
+  }
+
+  .dash-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .dash-charts {
+    grid-template-columns: 1fr;
+  }
+
+  .dash-actions {
+    grid-template-columns: 1fr;
+  }
+}
