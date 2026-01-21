@@ -1,0 +1,24 @@
+.course-search {
+  display: grid;
+  grid-template-columns: 1fr 170px;
+  gap: 12px;
+}
+
+.course-search__input {
+  border: 2px solid #777;
+  padding: 10px 10px;
+  font-size: 12px;
+}
+
+.course-search__select {
+  border: 2px solid #777;
+  padding: 10px 10px;
+  font-size: 12px;
+  background: #fff;
+}
+
+@media (max-width: 950px) {
+  .course-search {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,23 @@
+.booked-wrap {
+  padding: 26px 12px 40px;
+  background: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: calc(100vh - 90px);
+}
+
+.booked-card {
+  width: 920px;
+  max-width: 95vw;
+  margin: 0 auto;
+  border: 2px solid #777;
+  background: #fff;
+  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.08);
+  padding: 18px 18px 16px;
+}
+
+.booked-title {
+  margin: 0 0 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 20px;
+}

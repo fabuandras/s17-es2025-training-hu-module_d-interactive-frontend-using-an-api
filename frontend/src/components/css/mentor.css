@@ -1,0 +1,149 @@
+.mentor-card {
+  border: 2px solid #777;
+  background: #fff;
+  box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.06);
+  padding: 14px 14px 16px;
+  position: relative;
+  margin-top: 12px;
+}
+
+.mentor-tag {
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  font-size: 9px;
+  letter-spacing: 1px;
+  background: #fff;
+  padding: 0 6px;
+  color: #777;
+  text-transform: uppercase;
+}
+
+.mentor-name {
+  margin: 0;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.mentor-sep {
+  border-top: 1px dashed #999;
+  margin: 10px 0 10px;
+}
+
+.mentor-small {
+  font-size: 12px;
+  color: #444;
+  margin: 0 0 10px;
+}
+
+.mentor-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin: 12px 0 12px;
+}
+
+.mentor-metrics--booked {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.mentor-metric {
+  border: 2px solid #777;
+  text-align: center;
+  padding: 10px 8px;
+}
+
+.mentor-metric__label {
+  font-size: 9px;
+  letter-spacing: 1px;
+  color: #666;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.mentor-metric__value {
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.mentor-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: 6px;
+}
+
+.mentor-btn {
+  border: 2px solid #777;
+  padding: 10px 12px;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 700;
+  background: #fff;
+  cursor: pointer;
+}
+
+.mentor-btn:hover {
+  background: #f2f2f2;
+}
+
+.mentor-btn-muted {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.mentor-btn-primary {
+  border-color: #4a9b4a;
+  background: #eaf6ea;
+  color: #1f5b1f;
+}
+
+.mentor-btn-status {
+  border-color: #c8b36a;
+  background: #fbf3d6;
+  color: #6a5b1c;
+  cursor: default;
+}
+
+.status-badge {
+  display: inline-block;
+  border: 2px solid #777;
+  padding: 10px 12px;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 12px;
+  background: #fff;
+}
+
+.status-badge.pending {
+  border-color: #c8b36a;
+  background: #fbf3d6;
+  color: #6a5b1c;
+}
+
+.status-badge.rejected {
+  border-color: #a36a6a;
+  background: #f3d6d6;
+  color: #6a1c1c;
+}
+
+.status-badge.confirmed {
+  border-color: #4a9b4a;
+  background: #eaf6ea;
+  color: #1f5b1f;
+}
+
+@media (max-width: 950px) {
+  .mentor-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .mentor-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

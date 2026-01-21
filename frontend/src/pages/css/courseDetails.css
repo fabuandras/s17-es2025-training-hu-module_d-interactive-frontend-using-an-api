@@ -1,0 +1,220 @@
+.cd-wrap {
+  padding: 26px 12px 40px;
+  background: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: calc(100vh - 90px);
+}
+
+/* felső nagy kártya */
+.cd-top-card {
+  width: 920px;
+  max-width: 95vw;
+  margin: 0 auto 14px;
+  border: 2px solid #777;
+  background: #fff;
+  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.08);
+  padding: 18px 18px 16px;
+}
+
+.cd-back {
+  display: inline-block;
+  border: 2px solid #777;
+  padding: 10px 14px;
+  text-decoration: none;
+  color: #222;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.cd-back:hover {
+  background: #f2f2f2;
+}
+
+.cd-title {
+  margin: 0 0 10px;
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.cd-desc {
+  margin: 0 0 16px;
+  font-size: 12px;
+  color: #444;
+  line-height: 1.35;
+}
+
+/* progress dobozok */
+.cd-progress-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.cd-progress {
+  border: 1px dashed #999;
+  padding: 12px;
+}
+
+.cd-progress-head {
+  text-align: center;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.cd-bar {
+  height: 14px;
+  border: 2px solid #777;
+  background: #fff;
+  position: relative;
+}
+
+.cd-bar-fill {
+  height: 100%;
+  width: 0%;
+  background: repeating-linear-gradient(
+    45deg,
+    #333,
+    #333 6px,
+    #bbb 6px,
+    #bbb 12px
+  );
+}
+
+.cd-progress-foot {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 11px;
+  color: #333;
+  letter-spacing: 1px;
+}
+
+/* chapter kártyák */
+.cd-chapter {
+  width: 920px;
+  max-width: 95vw;
+  margin: 0 auto 14px;
+  border: 2px solid #777;
+  background: #fff;
+  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.06);
+  padding: 16px 16px 14px;
+  position: relative;
+}
+
+.cd-chapter-tag {
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  font-size: 9px;
+  letter-spacing: 1px;
+  background: #fff;
+  padding: 0 6px;
+  color: #777;
+  text-transform: uppercase;
+}
+
+.cd-chapter-title {
+  margin: 0;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.cd-sep {
+  border-top: 1px dashed #999;
+  margin: 10px 0 10px;
+}
+
+.cd-chapter-desc {
+  margin: 0 0 12px;
+  font-size: 12px;
+  color: #444;
+}
+
+.cd-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.cd-credit-badge {
+  border: 2px solid #777;
+  padding: 8px 12px;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+}
+
+.cd-buttons {
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.cd-btn {
+  border: 2px solid #777;
+  padding: 10px 12px;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 700;
+  background: #fff;
+  cursor: pointer;
+}
+
+.cd-btn:hover {
+  background: #f2f2f2;
+}
+
+.cd-btn-muted {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.cd-btn-green {
+  border-color: #4a9b4a;
+  background: #eaf6ea;
+  color: #1f5b1f;
+}
+
+.cd-btn-green:disabled {
+  opacity: 0.9;
+  cursor: default;
+}
+
+.cd-share {
+  width: 100%;
+  border: 2px solid #777;
+  background: #fff;
+  padding: 12px 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.cd-share:hover {
+  background: #f2f2f2;
+}
+
+/* mobil */
+@media (max-width: 900px) {
+  .cd-progress-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cd-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
